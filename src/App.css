@@ -1,0 +1,25 @@
+.app-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: rgb(150, 170, 187);
+  padding: 60px;
+}
+
+
+
+.form-section {
+  width: 100%;
+  max-width: 800px;
+  margin-bottom: 30px;
+}
+
+.list-section {
+  width: 100%;
+  max-width: 1200px;
+}
+*{
+  padding : 0;
+  margin : 0;
+
+}

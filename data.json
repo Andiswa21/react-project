@@ -1,0 +1,49 @@
+{
+  "employees": [
+    {
+      "id": "44",
+      "name": "ploko",
+      "surname": "zWEL",
+      "email": "cdaxs@vrcx.sok",
+      "phone": "1818",
+      "image": "blob:http://localhost:5174/f3b5fd04-6669-4ff8-995d-de0a7ac4f9d8",
+      "position": "ceo"
+    },
+    {
+      "id": "77",
+      "name": "ploko",
+      "surname": "zWEL",
+      "email": "cdaxs@vrcx.sok",
+      "phone": "1818",
+      "image": "blob:http://localhost:5174/ea062484-0964-4ec0-beb3-eddb733bb403",
+      "position": "ceo"
+    },
+    {
+      "id": "8892",
+      "name": "ploko",
+      "surname": "zWEL",
+      "email": "cdaxs@vrcx.sok",
+      "phone": "1818",
+      "image": "blob:http://localhost:5174/a9eaea70-8640-4845-a8f1-26315748c072",
+      "position": "ceo"
+    },
+    {
+      "id": "76954",
+      "name": "ploko",
+      "surname": "zWEL",
+      "email": "cdaxs@vrcx.sok",
+      "phone": "1818",
+      "image": "",
+      "position": "ceo"
+    },
+    {
+      "id": "8569",
+      "name": "Andiswa",
+      "surname": "Ngwenya",
+      "email": "andiswa.ngwenya19@gmail.com",
+      "phone": "0726498711",
+      "image": "blob:http://localhost:5174/8657144d-1163-498f-ba79-f9f2a0b389c4",
+      "position": "dcasx"
+    }
+  ]
+}
