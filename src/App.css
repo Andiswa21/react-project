@@ -1,0 +1,39 @@
+*{
+  background-color: azure;
+}
+.box{
+  width: 150px;
+  height: 150px;
+  margin: 5px;
+  color :black;
+
+ 
+  
+}
+.container{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 50px;
+  align-items: center;
+
+  
+}
+#box1{
+  background-color: aqua;
+  width: 250px;
+  height:150px;
+}
+#box2{
+  background-color: yellow;
+  width: 170px;
+ 
+}
+#box5{
+  background-color: red;
+  border-radius: 80px;
+}
+#box6{
+  background-color: rgb(7, 111, 152);
+  
+}
