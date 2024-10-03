@@ -12,7 +12,7 @@ const Signup = () => {
 
     const signupWithUsernameAndPassword = async (e) => {
         e.preventDefault();
-
+   //8284701391000349
         if (password === confirmPassword) {
             try {
                 await createUserWithEmailAndPassword(auth, email, password);
