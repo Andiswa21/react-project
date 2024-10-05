@@ -44,6 +44,15 @@
       "phone": "0726498711",
       "image": "blob:http://localhost:5174/8657144d-1163-498f-ba79-f9f2a0b389c4",
       "position": "dcasx"
+    },
+    {
+      "id": "151",
+      "name": "Andiswa",
+      "surname": "Ngwenya",
+      "email": "andiswa.ngwenya18@gmail.com",
+      "phone": "726498711",
+      "image": "blob:http://localhost:5175/3f722dfa-8b34-47f0-b71a-44ccadea37fb",
+      "position": "4525"
     }
   ]
 }

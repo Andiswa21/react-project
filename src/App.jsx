@@ -12,7 +12,7 @@ function App() {
   }, []);
 
   const fetchEmployees = async () => {
-    const response = await fetch('http://localhost:8000/employees');
+    const response = await fetch('http://localhost:3000/employees');
     const data = await response.json();
     setEmployees(data);
   };
@@ -22,7 +22,7 @@ function App() {
   };
 
   const handleDelete = async (id) => {
-    await fetch(`http://localhost:8000/employees/${id}`, {
+    await fetch(`http://localhost:3000/employees/${id}`, {
       method: 'DELETE',
     });
     fetchEmployees();
