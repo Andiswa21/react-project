@@ -11,8 +11,8 @@ const EmployeeForm = ({ selectedEmployee, refreshEmployees }) => {
     image: '',
     position: ''
   });
-  
-  const [searchId, setSearchId] = useState(''); // State to manage search input
+
+  const [searchId, setSearchId] = useState('');
 
   useEffect(() => {
     if (selectedEmployee) {
@@ -22,7 +22,7 @@ const EmployeeForm = ({ selectedEmployee, refreshEmployees }) => {
 
   const handleChange = (event) => {
     const name = event.target.name;
-    const value = name === "image" ? URL.createObjectURL(event.target.files[0]) : event.target.value;
+    const value = name === 'image' ? URL.createObjectURL(event.target.files[0]) : event.target.value;
     setInputs(values => ({ ...values, [name]: value }));
   };
 
@@ -35,16 +35,27 @@ const EmployeeForm = ({ selectedEmployee, refreshEmployees }) => {
           throw new Error('Employee not found');
         }
         const data = await response.json();
-        setInputs(data); // Populate the form with the employee data
+        setInputs(data); // Input the form with the employee data
       } catch (error) {
         console.error('Error fetching employee:', error);
-        alert('Employee not found. Please check the ID and try again.'); // Inform the user if not found
+        alert('Employee not found. Please check the ID and try again.');
       }
     }
   };
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+
+    // Validate ID and phone number
+    if (!/^\d{13}$/.test(inputs.id)) {
+      alert('ID must be exactly 13 digits long');
+      return;
+    }
+    if (!/^\d{10}$/.test(inputs.phone)) {
+      alert('Phone number must be exactly 10 digits long');
+      return;
+    }
+
     const method = selectedEmployee ? 'PUT' : 'POST';
     const url = selectedEmployee ? `http://localhost:3000/employees/${inputs.id}` : 'http://localhost:3000/employees';
 
@@ -80,7 +91,7 @@ const EmployeeForm = ({ selectedEmployee, refreshEmployees }) => {
         image: '',
         position: ''
       });
-      setSearchId(''); // Reset the search input
+      setSearchId(''); // Reset 
       refreshEmployees();
     } catch (error) {
       console.error('There was a problem with the fetch operation:', error);
@@ -89,20 +100,9 @@ const EmployeeForm = ({ selectedEmployee, refreshEmployees }) => {
 
   return (
     <>
-      <form onSubmit={handleSearch} className="search-container">
-        <label>
-          Search by ID:
-          <input
-            type="text"
-            value={searchId}
-            onChange={(e) => setSearchId(e.target.value)}
-            required
-          />
-        </label>
-        <input type="submit" value="Search" />
-      </form>
+   
 
-      <form onSubmit={handleSubmit} className="form-container">
+      <form onSubmit={handleSubmit} className="form-container d-flex justify-content-center align-items-center">
         <label>ID:
           <input
             type="text"
@@ -169,6 +169,19 @@ const EmployeeForm = ({ selectedEmployee, refreshEmployees }) => {
           />
         </label>
         <input type="submit" value={selectedEmployee ? 'Update Employee' : 'Add Employee'} />
+      </form>
+          <br /><br />
+      <form onSubmit={handleSearch} className="search-container">
+        <label>
+          Search by ID:
+          <input
+            type="number"
+            value={searchId}
+            onChange={(e) => setSearchId(e.target.value)}
+            required
+          />
+        </label>
+        <input type="submit" value="Search" />
       </form>
     </>
   );

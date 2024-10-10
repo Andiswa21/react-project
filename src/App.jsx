@@ -35,7 +35,7 @@ function App() {
 
   return (
     
-    <div className="app-container">
+    <div className="app-container ">
       <h1>Employee Enrollment App </h1>
       <div className="form-section">
         <EmployeeForm selectedEmployee={selectedEmployee} refreshEmployees={refreshEmployees} />
